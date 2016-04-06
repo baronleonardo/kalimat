@@ -5,5 +5,4 @@ An Arabic programming language by dr. Mohammad Samy
 http://lordadamson.github.io/kalimat/
 
 ## Download:
-In the bin/ sub-directory you can find an rpm that you can use in fedora. </br>
-If you use ubuntu, can try to extract it into the respective system locations as in the rpm archive. (NOT TESTED).
+In the bin/ sub-directory you can find an rpm that you can use in fedora. </br> And you'll find a .deb that you can use for ubuntu (trusty or later).
