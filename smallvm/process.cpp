@@ -5,6 +5,7 @@
 #include "utils.h"
 #include "runtime/parserengine.h"
 #include <QDebug>
+#include <cstdint>
 
 #define assert0(cond, toSignal) if(!(cond)) { signal(toSignal); }
 #define assert1(cond, toSignal, arg0) if(!(cond)) { signal(toSignal, arg0); }
@@ -453,7 +454,7 @@ IMPLEMENT_VM_INSTRUCTION(DoPushLocal)
 
 IMPLEMENT_VM_INSTRUCTION(DoPushLocalCached)
 {
-    Value **v = currentFrame()->fastLocals + (int) executedInstruction->Arg;
+    Value **v = currentFrame()->fastLocals + (intptr_t) executedInstruction->Arg;
     assert1(v, NoSuchVariable1, executedInstruction->SymRef);
     pushOperand(*v);
 }

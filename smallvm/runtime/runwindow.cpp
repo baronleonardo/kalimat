@@ -15,14 +15,14 @@
 #include <QPushButton>
 #include <QPainter>
 #include <QKeyEvent>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include <QWaitCondition>
 #include <QClipboard>
 #include <QTime>
 //#include <iostream>
 #include <QFileInfo>
 #include <QDir>
-#include <QtConcurrent/QtConcurrentRun>
+#include <QtConcurrentRun>
 #include <thread>
 
 using namespace std;
@@ -52,7 +52,7 @@ void RunWindow::setup(QString pathOfProgramsFile, VMClient *client)
 #endif
     this->pathOfProgramsFile = pathOfProgramsFile;
 
-    this->setFixedSize(800, 600);
+    this->setFixedSize(1680, 1050);//(800, 600);
     textLayer.Init(width(), height(), font());
     paintSurface = new PaintSurface(size(), font());
 

@@ -6,7 +6,7 @@
 **************************************************************************/
 
 #include <QFile>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include <QTextStream>
 #include <QFileDialog>
 #include <QStatusBar>

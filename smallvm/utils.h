@@ -13,7 +13,8 @@
 #include <QString>
 #include <QMap>
 #include <QSet>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
+//#include <QtWidgets/QMessageBox>
 
 
 void mySleep(int ms);

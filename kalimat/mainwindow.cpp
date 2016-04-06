@@ -29,7 +29,7 @@
 #include "makeexedlg.h"
 #include "mytooltip.h"
 
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QCloseEvent>
@@ -49,6 +49,8 @@
 #include <QIcon>
 #include <QSqlQuery>
 #include <QImageWriter>
+
+#include <cstdint>
 
 MainWindow *MainWindow::that = NULL;
 
@@ -2142,7 +2144,7 @@ void MainWindow::on_actionUpdate_code_model_triggered()
         generatingProgramModel = false;
         return;
     }
-    QString fileName = doc->isDocNewFile()? QString("%%1").arg((uint) doc): doc->getFileName();
+    QString fileName = doc->isDocNewFile()? QString("%%1").arg((intptr_t) doc): doc->getFileName();
     t1 = get_time();
     if(!progdb.isOpen())
         progdb.open();
@@ -2362,7 +2364,7 @@ void MainWindow::on_action_go_to_definition_triggered()
 
     MyEdit *editor = dynamic_cast<MyEdit *>(currentEditor());
     CodeDocument *doc = docContainer->getCurrentDocument();
-    QString filename = doc->isDocNewFile()? QString("%%1").arg((uint) doc) : doc->getFileName();
+    QString filename = doc->isDocNewFile()? QString("%%1").arg((intptr_t) doc) : doc->getFileName();
 
     int cursorPos = editor->textCursor().position();
     QSqlQuery q = progdb.q("SELECT defining_token_pos FROM function_definitions JOIN definitions "

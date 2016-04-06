@@ -42,7 +42,7 @@
 #include <QRgb>
 #include <QtDebug>
 //#include <QtConcurrentRun>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include <iostream>
 #include "../smallvm/vm_ffi.h"
 using namespace std;

@@ -10,7 +10,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QFileDialog>
-#include <QtWidgets/QMessageBox>
+#include <QMessageBox>
 #include <QCloseEvent>
 #include <QAction>
 #include <QMenu>
