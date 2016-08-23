@@ -1,0 +1,11 @@
+Package: kalimat
+Version: 1.0-1
+Section: education
+Priority: optional
+Architecture: amd64
+Depends: libffi6 (>= 3.0), libqt4-sql (>= 4:4.8.5), libqt4-gui (>= 4:4.8.5), libqt4-core (>= 4:4.8.5), libc6 (>= 2.19), libstdc++6 (>= 4.8.2-19), libgcc1 (>= 1:4.9-20140406-0ubuntu1)
+Maintainer: Mohamed Samy <samy2004@gmail.com>
+Installed-Size: 2592
+Description: Kalimat Programming Language
+ This is a programming language written in Arabic aims to teach Arabic
+ speaking children how to program easily.

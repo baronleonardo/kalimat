@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+	<mime-type type="text/x-kalimat">
+    <sub-class-of type="text/plain" />
+		<comment>Kalimat Source File</comment>
+		<comment xml:lang="ar">ملف لغة كلمات</comment>
+		<glob pattern="*.k"/>
+    <glob pattern="*.ك"/>
+    <glob pattern="*.كلمات"/>
+	</mime-type>
+</mime-info>
