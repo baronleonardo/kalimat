@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QtSql/QSqlError>
 
+#include <cstdint>
+
 ProgramDatabase::ProgramDatabase()
 {
     _isOpen = false;
@@ -34,14 +36,14 @@ void ProgramDatabase::updateModule(QString filename, CodeDocument *doc, shared_p
     if(!hasModule(filename))
     {
         exec("INSERT INTO modules(filename, type, code_doc) VALUES (?,?,?);",
-             filename,type, (uint) doc);
+             filename,type, (unsigned long long) doc); // TODO: replace the unsigned long long with a type like intptr_t for better compatibility with different architictures
     }
     else
     {
         exec("UPDATE modules SET type=?, code_doc=? WHERE filename=?;",
              type,
-             (uint) doc,
-             filename);
+             (unsigned long long) doc,
+             filename); // TODO: replace the unsigned long long with a type like intptr_t for better compatibility with different architictures
     }
 }
 
