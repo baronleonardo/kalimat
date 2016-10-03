@@ -15,7 +15,6 @@
 #include <QSet>
 #include <QMessageBox>
 
-
 void mySleep(int ms);
 long get_time();
 

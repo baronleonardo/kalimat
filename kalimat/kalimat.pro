@@ -157,6 +157,7 @@ FORMS += mainwindow.ui \
 # CONFIG += qtestlib
 # QT += webkit
 QT += sql
+QT += widgets
 RESOURCES += keywords.qrc \
     icons.qrc \
     ../smallvm/messages.qrc
