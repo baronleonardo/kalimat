@@ -22,7 +22,7 @@ SyntaxHighlighter::SyntaxHighlighter(QTextDocument *parent, KalimatLexer *_lexer
     lexer = _lexer;
 
     keywords.setForeground(Qt::blue);
-    comments.setForeground(Qt::green);
+    comments.setForeground(Qt::gray);
     stringLiterals.setForeground(Qt::darkMagenta);
     fileLink.setForeground(Qt::darkBlue);
     fileLink.setUnderlineStyle(QTextCharFormat::DashUnderline);
